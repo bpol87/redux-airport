@@ -14,7 +14,7 @@ function AirlineForm() {
             type: 'ADD_AIRLINE',
             payload: {
                 name: airlineNameInput,
-                airplaneTotal: airplaneTotalInput
+                airplaneTotal: Number(airplaneTotalInput)
             }
         })
         setAirlineNameInput('');
