@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 function AirlineForm() {
     const [airlineNameInput, setAirlineNameInput] = useState('');
+    const [airplaneTotalInput, setAirplaneTotalInput] = useState('');
 
     const dispatch = useDispatch();
 
@@ -13,9 +14,11 @@ function AirlineForm() {
             type: 'ADD_AIRLINE',
             payload: {
                 name: airlineNameInput,
+                airplaneTotal: airplaneTotalInput
             }
         })
         setAirlineNameInput('');
+        setAirplaneTotalInput('');
     }
 
     return (
@@ -28,6 +31,11 @@ function AirlineForm() {
                     onChange={e => setAirlineNameInput(e.target.value)}
                     placeholder='Airline Name'
                     type="text" />
+                    <input
+                    value={airplaneTotalInput}
+                    onChange={e => setAirplaneTotalInput(e.target.value)}
+                    placeholder='Airplanes Number'
+                    type="number" />
                 <button type='submit'>Add Airline</button>
             </form>
         </div>

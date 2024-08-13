@@ -11,6 +11,7 @@ function AirlineTable() {
                 <thead>
                     <tr>
                         <th>Airline Name</th>
+                        <th>Airplane Totals</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -18,6 +19,7 @@ function AirlineTable() {
                         return (
                             <tr>
                                 <td>{airline.name}</td>
+                                <td>{airline.airplaneTotal} planes</td>
                             </tr>
                         )
                     })}
